@@ -2,33 +2,51 @@ package _01_Encapsulate_the_Data;
 
 public class EncapsulateTheData {
 
-    /*
-     * itemsReceived cannot be negative. All negative parameters should set
-     * itemsReceived to 0.
-     */
+	/*
+	 * itemsReceived cannot be negative. All negative parameters should set
+	 * itemsReceived to 0.
+	 */
+	private int itemsReceived;
 
-    int itemsReceived;
+	public void getItemsReceived(int newValue) {
+		if (newValue > 0) {
+			itemsReceived = newValue;
+		}
+	}
 
-    /*
-     * degreesTurned must be locked between 0.0 and 360.0 inclusive. All
-     * parameters outside this range should set degreesTurned to the nearest
-     * bound.
-     */
+	public void setItemsReceived(int newValue) {
+		if (newValue < 0) {
+			itemsReceived = 0;
+		}
+	}
 
-    double degreesTurned;
+	/*
+	 * degreesTurned must be locked between 0.0 and 360.0 inclusive. All parameters
+	 * outside this range should set degreesTurned to the nearest bound.
+	 */
+	// double degreesTurned;
 
-    /*
-     * nomenclature must not contain an empty String. An empty String parameter
-     * should set nomenclature to a String with a single space.
-     */
+	if(0<=degreesTurned<=360)
 
-    String nomenclature;
+	{
 
-    /*
-     * memberObj must not be a String. A String parameter should set memberObj
-     * to a new Object(); Hint: Use the instanceof operator.
-     */
+	}
 
-    Object memberObj;
+	/*
+	 * nomenclature must not contain an empty String. An empty String parameter
+	 * should set nomenclature to a String with a single space.
+	 */
+
+	String nomenclature;nomenclatur.trim();if(nomenclatur.length()>=1)
+	{
+
+	}
+
+	/*
+	 * memberObj must not be a String. A String parameter should set memberObj to a
+	 * new Object(); Hint: Use the instanceof operator.
+	 */
+
+	Object memberObj;
 
 }

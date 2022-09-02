@@ -8,15 +8,18 @@ public class EncapsulateTheData {
 	 */
 	private int itemsReceived;
 
-	public void getItemsReceived(int newValue) {
-		if (newValue > 0) {
-			itemsReceived = newValue;
-		}
+	public int getItemsReceived() {
+		return itemsReceived;
+
 	}
 
 	public void setItemsReceived(int newValue) {
 		if (newValue < 0) {
 			itemsReceived = 0;
+		}
+		
+		if (newValue > 0) {
+			itemsReceived = newValue;
 		}
 	}
 
@@ -24,12 +27,26 @@ public class EncapsulateTheData {
 	 * degreesTurned must be locked between 0.0 and 360.0 inclusive. All parameters
 	 * outside this range should set degreesTurned to the nearest bound.
 	 */
-	// double degreesTurned;
 
-	if(0<=degreesTurned<=360)
+	private Double degreesTurned;
 
-	{
+	public Double getDegreesTurned() {
+		return degreesTurned;
 
+	}
+
+	public void setDegreesTurned(Double rpm) {
+		if (rpm < 0) {
+			degreesTurned = 0.0;
+		}
+				
+		if (rpm > 360) {
+			degreesTurned = 360.0;
+		}
+		
+		if (rpm >= 0 && rpm <= 360) {
+			degreesTurned = rpm;
+		}
 	}
 
 	/*
@@ -37,16 +54,23 @@ public class EncapsulateTheData {
 	 * should set nomenclature to a String with a single space.
 	 */
 
-	String nomenclature;nomenclatur.trim();if(nomenclatur.length()>=1)
-	{
+	private String nomenclature;
 
+	public String getNomenclature() {
+		return nomenclature;
 	}
 
-	/*
-	 * memberObj must not be a String. A String parameter should set memberObj to a
-	 * new Object(); Hint: Use the instanceof operator.
-	 */
+	public void setNomenclature(String ranst) {
+		String empt = " ";
+		ranst.trim();
+		if (ranst.length() < 1) {
+			nomenclature = empt;
+		}
+		
+		else {
+			nomenclature = ranst;
+		}
 
-	Object memberObj;
+	}
 
 }

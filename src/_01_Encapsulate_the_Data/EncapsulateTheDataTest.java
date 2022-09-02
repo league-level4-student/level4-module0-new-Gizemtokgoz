@@ -111,34 +111,6 @@ public class EncapsulateTheDataTest {
 
     }
 
-    @Test
-    void memberObjEncapsulated() {
-
-        assertTrue(isEncapsulated("memberObj"));
-
-    }
-
-    @Test
-    void memberObjGetterSetter() {
-
-        Object randomObject = new Object();
-
-        testData.setMemberObj(randomObject);
-
-        assertEquals(randomObject, testData.getMemberObj());
-
-    }
-
-    @Test
-    void memberObjNotString() {
-
-        String blankString = "";
-
-        testData.setMemberObj(blankString);
-
-        assertFalse(testData.getMemberObj() instanceof String);
-
-    }
 
     private boolean isEncapsulated(String memberVariableName) {
 

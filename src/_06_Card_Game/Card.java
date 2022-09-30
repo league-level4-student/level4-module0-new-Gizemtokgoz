@@ -9,7 +9,21 @@ public class Card {
         this.rank = rank;
         this.suit = suit;
     }
+    
+    enum Suit{
+    	SPADES, CLUBS, HEARTS, DIAMONDS
+    }
+    
+    enum Rank{
+    	TWO(2), THREE(3), FOUR(4), FIVE(5), SIX(6), SEVEN(7), EIGHT(8), NINE(9), TEN(10), JACK(11), QUEEN(12), KING(13), ACE(1); 
 
+    	private int value;
+		Rank(int i) {
+			// TODO Auto-generated constructor stub
+			this.value = i;
+		}
+    }
+    
     public Rank getRank() {
         return rank;
     }

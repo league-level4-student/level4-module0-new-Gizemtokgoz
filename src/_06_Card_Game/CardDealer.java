@@ -1,20 +1,27 @@
 package _06_Card_Game;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
+import _06_Card_Game.Card.Rank;
 import _06_Card_Game.Card.Suit;
 
 public class CardDealer {
-    
-    ArrayList<Card> deck;
-    
-    public void createDeck() {
-    	for (int i = 0; i < 52; i++) {
-			for (int j = 0; j < 52; j++) {
-				deck.add(getSuit(), getRank());
+
+	ArrayList<Card> deck;
+	Card cardNum;
+
+	public void createDeck() {
+		for (Rank rank : Card.Rank.values()) {
+			for (Suit suit : Card.Suit.values()) {
+				Card crd = new Card(rank, suit);
+				deck.add(crd);
 			}
 		}
-    }
+	}
 
+	public void shuffle() {
+		Collections.shuffle(deck, new Random(52));
+	}
 }
